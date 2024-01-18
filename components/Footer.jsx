@@ -83,9 +83,9 @@ const Footer = () => {
       </div>
       <div className="bottom-details w-full py-2 px-4 bg-zinc-600">
         <div className="bottom_text m-auto flex-between">
-          <span className="copyright_text opacity-80 text-slate-50 hover:opacity-100 ">Copyright © 2024
+          <span className="copyright_text opacity-80 text-slate-50 hover:opacity-100 ">Copyright © 2024 by Vighnesh Vangari
           <a className='opacity-90 text-slate-50  hover:underline px-4 hover:opacity-100'  href="/">Promptex</a>
-          All rights reserved
+            All rights reserved
           </span>
           <span className=" opacity-80 text-slate-50 hover:opacity-100 ">
             <a className='opacity-80 text-slate-50  hover:underline px-4 hover:opacity-100'  href="/">Privacy policy</a>

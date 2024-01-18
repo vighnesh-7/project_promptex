@@ -1,13 +1,25 @@
 'use client'
 import Link from "next/link"
 import AlertBox from "./AlertBox";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import { useSession } from "next-auth/react"
+import { useRouter } from "next/navigation";
+
 
 const Form = ({type,post,setPost,submitting,handleSubmit}) => {
   
   const [showModal, setShowModal] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
-  
+  const router = useRouter()
+  const { data: session } = useSession()
+
+    useEffect(() => {
+    // Redirect to home page if user is not authenticated
+    if (!session?.user?.id) {
+      router.push("/");
+    }
+  }, [session, router]);
+
   const trimFields= (e)=>{
         const trimmedPrompt = post.prompt.trim();
         const trimmedTag = post.tag.trim()
@@ -30,9 +42,15 @@ const Form = ({type,post,setPost,submitting,handleSubmit}) => {
         }
         handleSubmit(e)
   }
+
+  
   
   return (
+    
     <section className="w-full max-w-full flex-start flex-col ">
+      {
+        // session.user.id===undefined ? router.push("/") :1
+      }
       <h1 className="head_text text_left">
         <span style={{ backgroundClip: 'text',color: 'transparent',
           backgroundImage: ' radial-gradient(circle, rgba(155,52,230,1) 16%, rgba(170,45,213,1) 39%, rgba(198,9,163,1) 63%)'}}>

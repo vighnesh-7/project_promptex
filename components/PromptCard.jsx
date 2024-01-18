@@ -13,9 +13,9 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
   const [copied, setCopied] = useState("")
 
   const handleProfileClick = () => {
-    console.log(post)
+    // console.log(post)
 
-    if (post.creator._id === session?.user.id) return router.push("/profile")
+    if (post.creator?._id === session?.user.id) return router.push("/profile")
 
     router.push(`/profile/${post.creator._id}?name=${post.creator.username}`)
   };
@@ -37,7 +37,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
         >
           <Image
             className='rounded-full object-contain'
-            src={post.creator.image}
+            src={post.creator?.image}
             alt='user_image'
             width={40}
             height={40}
@@ -45,10 +45,10 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
 
           <div className='flex flex-col'>
             <h3 className='font-semibold text-gray-900 dark:text-slate-200' style={{fontFamily:'Roboto'}}>
-              {post.creator.username}
+              {post.creator?.username}
             </h3>
             <p className='font-inter  text-sm text-gray-500 dark:text-gray-400' style={{fontFamily:'Roboto'}}>
-              {post.creator.email}
+              {post.creator?.email}
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
 
       {/* if the current logged in user is the creator of the post  and they are on the profile page too */}
       {/* then we can show edit and delete post options */}
-      {session?.user.id === post.creator._id && pathName === "/profile" && (
+      {session?.user.id === post.creator?._id && pathName === "/profile" && (
         <div className='mt-5 flex-center gap-6 border-t border-gray-100 pt-3'>
           <button className='button-7 p-2 px-3 font-inter text-sm cursor-pointer bg-green-600 hover:bg-green-700'
             onClick={handleEdit}

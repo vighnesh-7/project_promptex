@@ -62,7 +62,7 @@ const Feed = () => {
     }
 
     fetchPosts()
-  },[])
+  },[searchText, searchedResults])
   
 
   const filterPrompts = (searchtext) => {
@@ -72,7 +72,7 @@ const Feed = () => {
     // for searching the particular search target with all the available posts of other users
     return posts.filter(
       (currPost) =>
-        regex.test(currPost.creator.username) ||
+        regex.test(currPost.creator?.username) ||
         regex.test(currPost.tag) ||
         regex.test(currPost.prompt)
     );

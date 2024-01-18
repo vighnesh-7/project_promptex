@@ -21,6 +21,14 @@ const CreatePrompt = () => {
         e.preventDefault()
         setSubmitting(true)
 
+        // const trimmedPrompt = post.prompt.trim();
+        // const trimmedTag = post.tag.trim()
+        // if(trimmedPrompt === '' || trimmedTag === '')
+        // {
+        //     alert("Post Fields cannot be empty")
+        //     return
+        // }
+        
         try{
             const response  = await fetch ('/api/prompt/new',{
                 method:'POST',

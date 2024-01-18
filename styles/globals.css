@@ -54,7 +54,6 @@
 
 .main:after {
     content: "";
-    background-image: url("/assets/images/grid.svg");
     z-index: 1;
     position: absolute;
     width: 100%;
@@ -73,15 +72,15 @@
 /* Tailwind Styles */
 
 .app {
-    @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+    @apply relative z-10 flex justify-center items-center flex-col  w-full sm:px-16 px-10;
 }
 
 .black_btn {
-    @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;
+    @apply rounded-full font-medium border border-black bg-black py-1.5 px-4 text-white transition-all hover:bg-white hover:text-black text-center text-base font-inter flex items-center justify-center;
 }
 
 .outline_btn {
-    @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm font-inter flex items-center justify-center;
+    @apply rounded-full font-medium border border-black bg-black py-1.5 px-4 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;
 }
 
 .head_text {
@@ -93,11 +92,12 @@
 }
 
 .search_input {
-    @apply block w-full rounded-md border border-gray-200 bg-white py-3 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-gray-400 focus:outline-none focus:ring-0;
+    @apply block w-full rounded-md border border-gray-200 bg-white py-3 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium 
+    focus:border-gray-400 focus:outline-none focus:ring-0;
 }
 
 .copy_btn {
-    @apply w-7 h-7 rounded-full bg-white/10  backdrop-blur flex justify-center items-center cursor-pointer;
+    @apply w-8 h-8 rounded-full text-center bg-gray-100 backdrop-blur flex justify-center items-center cursor-pointer;
 }
 
 .glassmorphism {
@@ -124,7 +124,7 @@
 
 /* Nav Component */
 .logo_text {
-    @apply max-sm:hidden font-satoshi font-semibold text-lg text-black tracking-wide;
+    @apply max-sm:hidden font-satoshi font-bold  text-3xl text-black tracking-wide;
 }
 
 .dropdown {
@@ -154,4 +154,36 @@
 
 .flex-between {
     @apply flex justify-between items-center;
+}
+/* Footer */
+.box:hover .link_name{
+    background: rgb(51, 187, 224);
+    background: linear-gradient(75deg, rgba(51, 187, 224, 1) 0%, rgba(234, 100, 232, 1) 38%, rgba(12, 238, 135, 1) 65%, rgba(229, 81, 240, 1) 100%);;
+    background-clip: text;
+    color:transparent;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.box input[type="text"] {
+    height: 2.3rm;
+    width: calc(100% + 55px);
+    outline: none;
+    border: 2px olid #afafb6;
+    border-radius: 4px;
+    font-size: 15px;
+    margin-top: 5px;
+    background-color: red;
+}
+
+@media (max-width: 607px) {
+    .box:hover .link_name {
+        background: rgb(51, 187, 224);
+        background: linear-gradient(75deg, rgba(51, 187, 224, 1) 0%, rgba(234, 100, 232, 1) 38%, rgba(12, 238, 135, 1) 65%, rgba(229, 81, 240, 1) 100%);
+        background-clip: text;
+        color: transparent;
+        font-size: 0.95rem;
+        font-weight: bold;
+    }
+
 }

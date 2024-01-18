@@ -34,7 +34,7 @@ const Feed = () => {
     setSearchText(e.target.value);
 
     // to control the rate of function calls
-    // to prevent call the searchResult function everytym a letter is entered in the searchBar 
+    // to prevent call the searchResult function everytym a letter is entered in the searchBar (rebounce)
     // ensure that the function is only executed after a certain delay since the last time it was invoked.
     setSearchTimeout(
       setTimeout(() => {
@@ -84,17 +84,16 @@ const Feed = () => {
     <section className="feed">
       <form className="flex-center realtive w-full">
         <input type="text"
-          className="search_input "
+          className="search_input dark:outline-violet-700 dark:outline-offset-4 dark:focus:outline-offset-4 dark:text-black dark:outline dark:outline-2  dark:focus:outline-red-600 text-lg"
           placeholder="Search for a tag or a username" 
           value={searchText}
           onChange={handleSearchChange}
           required
-          
         />
       </form>
 
 
-      {/* to show the feed cards or searchbar query cards  */}
+      {/* to show the  searchbar query cards or feeds cards respectively   */}
       {searchText ? (
         <PromptCardList
           data={searchedResults}

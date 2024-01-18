@@ -30,7 +30,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
   };
 
   return (
-    <div className='prompt_card '>
+    <div className='prompt_card dark:bg-zinc-900'>
       <div className='flex-start justify-between gap-5'>
         <div
           className='flex-1 flex-center justify-start gap-3 cursor-pointer' onClick={handleProfileClick}
@@ -44,19 +44,19 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
           />
 
           <div className='flex flex-col'>
-            <h3 className='font-semibold text-gray-900' style={{fontFamily:'Roboto'}}>
+            <h3 className='font-semibold text-gray-900 dark:text-slate-200' style={{fontFamily:'Roboto'}}>
               {post.creator.username}
             </h3>
-            <p className='font-inter text-sm text-gray-500' style={{fontFamily:'Roboto'}}>
+            <p className='font-inter  text-sm text-gray-500 dark:text-gray-400' style={{fontFamily:'Roboto'}}>
               {post.creator.email}
             </p>
           </div>
         </div>
 
-        <div className='copy_btn' onClick={handleCopy}>
+        <div className='copy_btn  dark:bg-neutral-500' onClick={handleCopy}>
           <Image
             src={
-              copied === post.prompt? "/assests/icons/tick.svg" : "/assests/icons/copy.svg"
+              copied === post.prompt? "/assets/icons/tick.svg" : "/assets/icons/copy.svg"
             }
             alt={copied === post.prompt ? "tick_icon" : "copy_icon"}
             width={20}
@@ -65,10 +65,10 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
         </div>
       </div>
 
-      <p className='my-4 text-sm font-normal text-gray-700 text-left indent-5 whitespace-normal break-words leading-6 ' style={{fontFamily:'Roboto'}}>
+      <p className='my-4 text-sm dark:text-white font-normal text-gray-700 text-left indent-5 whitespace-normal break-words leading-6 ' style={{fontFamily:'Roboto'}}>
         {post.prompt}
       </p>
-      <p className='font-inter text-sm text-lowercase text-sky-700 cursor-pointer font-medium' style={{fontFamily:'Roboto'}}
+      <p className='font-inter text-sm text-lowercase dark:text-sky-400 text-sky-700 cursor-pointer font-medium' style={{fontFamily:'Roboto'}}
         onClick={() => handleTagClick && handleTagClick(post.tag)}
       >
         {post.tag}

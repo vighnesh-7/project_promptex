@@ -24,8 +24,8 @@ const Nav = () => {
   return (
     <nav className='flex-between w-full mb-16 pt-3 '>
       <Link href='/' className='flex gap-2 flex-center '>
-        <Image src='/assests/images/logo.svg' width={45 } alt='prommptopia logo' height={45 } className='object-contain rounded-full' />
-        <p className='logo_text'>Promptex</p>
+        <Image src='/assets/images/logo.svg' width={45 } alt='prommptopia logo' height={45 } className='object-contain rounded-full' />
+        <p className='logo_text dark:text-gray-50'>Promptex</p>
       </Link>
 
       {/* Desktop Navigation */}
@@ -33,16 +33,16 @@ const Nav = () => {
         {
           session?.user ?(
             <div className='flex gap-3 md:gap-5'>
-              <Link href='/create-prompt' className='black_btn'>
+              <Link href='/create-prompt' className='black_btn dark:outline dark:hover:outline-blue-600'>
                 Create Post
               </Link>
 
-              <button type='button' onClick={signOut} className='outline_btn'>
+              <button type='button' onClick={signOut} className='outline_btn dark:outline dark:outline-gray-50 dark:hover:outline-blue-600 '>
                   Sign Out
               </button>
 
               <Link href='/profile'>
-                <Image src={session?.user.image}  width={36} height={36} className='rounded-full' alt='profile' />
+                <Image src={session?.user.image}  width={36} height={36} className='rounded-full dark:outline dark:outline-white dark:hover:outline-blue-600' alt='profile' />
               </Link>
             </div>
           ):(
@@ -50,7 +50,7 @@ const Nav = () => {
           {
             providers && 
               Object.values(providers).map((provider)=>(
-                <button type='button ' key={provider.name} onClick={()=>signIn(provider.id)} className='black_btn' >
+                <button type='button ' key={provider.name} onClick={()=>signIn(provider.id)} className='black_btn   dark:bg-slate-950 dark:hover:bg-gray-50 dark:outline dark:outline-white dark:hover:outline-blue-600' >
                   Sign In
                 </button>
               ))
@@ -65,7 +65,7 @@ const Nav = () => {
         {
           session?.user ? (
             <div className='flex'>
-                <Image src={session?.user?.image  } width={36} height={36} className='rounded-full' alt='profile' 
+                <Image src={session?.user?.image  } width={36} height={36} className='rounded-full dark:outline dark:outline-white dark:active:outline-blue-600 focus:outline-blue-600  dark:focus:outline-blue-600 ' alt='profile' 
                 onClick={()=>setToggleDropdown((prev)=>!prev)} />
                 {
                   toggleDropdown && (
@@ -88,7 +88,7 @@ const Nav = () => {
             {
               providers && 
               Object.values(providers).map((provider)=>(
-                  <button type='button ' key={provider.name} onClick={()=>signIn(provider.id)} className='black_btn' >
+                  <button type='button ' key={provider.name} onClick={()=>signIn(provider.id)} className='black_btn font-semibold  dark:bg-slate-950 dark:hover:bg-gray-50 dark:outline dark:outline-white' >
                     Sign In
                   </button>
                 ))

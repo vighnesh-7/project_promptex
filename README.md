@@ -1,8 +1,7 @@
 # Project Promptex
 
-![Project Promptex]
 
-[GitHub Repository](https://github.com/vighnesh-7/project_promptex)
+[Live Demo](https://project-promptex.vercel.app/) 
 
 ## Description
 
@@ -46,9 +45,9 @@ Promptex is a dynamic online platform where users collaboratively share and expl
 5. Access the application at http://localhost:3000.
 
 ## Contributing
-Contributions are welcome! Please follow these steps:
-Fork the repository
-Create a new branch (git checkout -b feature/your-feature)
-Commit your changes (git commit -am 'Add some feature')
-Push to the branch (git push origin feature/your-feature)
-Create a new Pull Request
+- Contributions are welcome! Please follow these steps:
+- Fork the repository
+- Create a new branch (git checkout -b feature/your-feature)
+- Commit your changes (git commit -am 'Add some feature')
+- Push to the branch (git push origin feature/your-feature)
+- Create a new Pull Request

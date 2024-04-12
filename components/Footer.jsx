@@ -5,6 +5,8 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -70,7 +72,7 @@ const Footer = () => {
             <li><a className='text-base hover:underline hover:underline-offset-4 text-gray-300 font-medium' style={{transition:'all 0.5s ease'}} href="/">ChatGpt Prompts</a></li>
             <li><a className='text-base hover:underline hover:underline-offset-4 text-gray-300 font-medium' style={{transition:'all 0.5s ease'}} href="/">PromptGenie</a></li>
           </ul>
-          <ul className="box mr-8 input-box text-black" style={{  width: ' calc(100% / 5 - 10px)'}} >
+          <ul className="box mr-8 input-box text-black hidden sm:block" style={{  width: ' calc(100% / 5 - 10px)'}} >
             <li className="link_name relative text-slate-50 font-semibold mb-1  text-lg sm:flex-col m">Subscribe</li>
             <li><input type="text " className='bg-stone-300 py-1 md:px-4 w-[139px] md:w-52 h-[38px]  px-2 rounded-md'  placeholder="Enter your email..." /></li>
             <li><input className='bg-gray-200 pb-1 text-blue-900 font-bold border-none text-xl cursor-pointer mx-0 my-3 opacity-50 hover: hover:opacity-100 rounded-lg py-1 md:px-4 w-[139px] md:w-52 h-[38px] ' 
@@ -81,15 +83,21 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="bottom-details w-full py-2 px-4 bg-zinc-600">
-        <div className="bottom_text m-auto flex-between">
-          <span className="copyright_text opacity-80 text-slate-50 hover:opacity-100 ">Copyright © 2024 by Vighnesh Vangari
-          <a className='opacity-90 text-slate-50  hover:underline px-4 hover:opacity-100'  href="/">Promptex</a>
-            All rights reserved
+      <div className="bottom-details w-full py-2 px-4 bg-zinc-600 ">
+        <div className="bottom_text m-auto max-sm:inline  flex-between">
+          <span className="copyright_text opacity-80 block text-slate-50 hover:opacity-100 ">Copyright © 2024 by Vighnesh Vangari
+            <a className='opacity-90 text-slate-50  hover:underline px-4 hover:opacity-100'  href="/">Promptex</a>
+            <br className=' sm:hidden' />
+              All rights reserved
           </span>
-          <span className=" opacity-80 text-slate-50 hover:opacity-100 ">
-            <a className='opacity-80 text-slate-50  hover:underline px-4 hover:opacity-100'  href="/">Privacy policy</a>
-            <a className='opacity-80 text-slate-50  hover:underline px-4 hover:opacity-100'  href="/">Terms & condition</a>
+          <span className=" opacity-80 mt-1 text-slate-50 hover:opacity-100 flex-between">
+            <a className='hover:underline ' >
+              <Link href="https://github.com/vighnesh-7/project_promptex" className=' hover:text-gray-200 space-x-2 flex items-center'>
+                <FaGithub className='my-1 me-1 w-5 h-5 hover:bg-gray-50 hover:text-gray-950 rounded-full ' />
+                Github
+              </Link>
+            </a>
+            <a className='opacity-80 text-slate-50  hover:underline sm:px-4 hover:opacity-100'  href="/">Terms & condition</a>
           </span>
         </div>
       </div>

@@ -6,6 +6,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import Link from 'next/link';
 
 const Footer = () => {
@@ -56,8 +57,8 @@ const Footer = () => {
           </div>
         </div>
         <hr className='w-full absolute left-0' />
-        <div className="link-boxes pt-4  w-full flex justify-between   ">
-          <ul className="box" style={{  width: ' calc(100% / 5 - 10px)'}}>
+        <div className=" pt-4  w-full flex justify-around   ">
+          <ul className="box max-sm:mr-36" >
             <li className="link_name relative text-slate-50 font-semibold mb-1  text-lg">Company</li>
             <li><a href="/" className='text-base hover:underline hover:underline-offset-4 text-gray-300 font-medium' style={{transition:'all 0.5s ease'}}>Home</a></li>
             <li><a href="/" className='text-base hover:underline hover:underline-offset-4 text-gray-300 font-medium' style={{transition:'all 0.5s ease'}}>Contact us</a></li>
@@ -83,18 +84,19 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="bottom-details w-full py-2 px-4 bg-zinc-600 ">
+      <div className="bottom-details w-full py-2 px-3 bg-zinc-600 ">
         <div className="bottom_text m-auto max-sm:inline  flex-between">
-          <span className="copyright_text opacity-80 block text-slate-50 hover:opacity-100 ">Copyright © 2024 by Vighnesh Vangari
-            <a className='opacity-90 text-slate-50  hover:underline px-4 hover:opacity-100'  href="/">Promptex</a>
+          <span className="copyright_text opacity-80 block text-slate-50 hover:opacity-100 ">Copyright © 2024 by { }
+          <br className='sm:hidden' />
+          Vighnesh Vangari &nbsp;&nbsp;
             <br className=' sm:hidden' />
               All rights reserved
           </span>
-          <span className=" opacity-80 mt-1 text-slate-50 hover:opacity-100 flex-between">
-            <a className='hover:underline ' >
-              <Link href="https://github.com/vighnesh-7/project_promptex" className=' hover:text-gray-200 space-x-2 flex items-center'>
+          <span className=" mt-1 text-slate-50  flex-between">
+            <a className='hover:underline me-2 ' >
+              <Link href="https://github.com/vighnesh-7/project_promptex" className=' hover:text-gray-200 flex items-center'>
                 <FaGithub className='my-1 me-1 w-5 h-5 hover:bg-gray-50 hover:text-gray-950 rounded-full ' />
-                Github
+                Github<FaExternalLinkAlt className='hover:text-blue-400 ms-1 w-3 h-3'/>
               </Link>
             </a>
             <a className='opacity-80 text-slate-50  hover:underline sm:px-4 hover:opacity-100'  href="/">Terms & condition</a>

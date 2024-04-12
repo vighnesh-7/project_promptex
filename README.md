@@ -1,7 +1,8 @@
 # Project Promptex
 
+## Getting Started
 
-[Live Demo](https://project-promptex.vercel.app/) 
+### [Live Demo](https://project-promptex.vercel.app/) 
 
 ## Description
 
@@ -27,22 +28,6 @@ Promptex is a dynamic online platform where users collaboratively share and expl
 - Node.js installed on your machine
 - Personal OAuth console key for login
 
-## Getting Started
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/vighnesh-7/project_promptex.git
-2. Navigate to the project directory:
-    cd project_promptex
-
-3. Install dependencies:
-    npm install
-
-4. Start the development server:
-    npm run dev
-
-5. Access the application at http://localhost:3000.
 
 ## Contributing
 - Contributions are welcome! Please follow these steps:
